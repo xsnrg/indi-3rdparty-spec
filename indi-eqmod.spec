@@ -1,5 +1,3 @@
-%global forgeurl https://github.com/indilib/indi-3rdparty/
-
 Name: indi-eqmod
 Version: 1.8.6.git
 Release: 1%{?dist}
@@ -8,10 +6,8 @@ Summary: Instrument Neutral Distributed Interface 3rd party drivers
 License: LGPLv2
 # See COPYRIGHT file for a description of the licenses and files covered
 
-%forgemeta -i
-
-URL: %{forgeurl}
-Source0: %{forgesource}
+URL: https://indilib.org
+Source0: https://github.com/indilib/indi-3rdparty/archive/master.tar.gz
 
 BuildRequires: cmake
 BuildRequires: libfli-devel
@@ -54,7 +50,7 @@ data acquisition, monitoring, and a lot more. This is a 3rd party driver.
 
 
 %prep -v
-%forgesetup -n %{name}-%{version}
+%setup -n %{name}-%{version}
 
 %build
 # This package tries to mix and match PIE and PIC which is wrong and will
@@ -67,8 +63,6 @@ make VERBOSE=1 %{?_smp_mflags}
 
 %install
 make install DESTDIR=%{buildroot}
-
-#%ldconfig_scriptlets libs
 
 %files
 %license indi-eqmod/COPYING LICENSE
