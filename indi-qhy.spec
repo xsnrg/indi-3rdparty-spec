@@ -42,7 +42,7 @@ BuildRequires: pkgconfig(libjpeg)
 BuildRequires: pkgconfig(libusb-1.0)
 BuildRequires: pkgconfig(zlib)
 
-BuildRequires: libqhy-devel
+BuildRequires: libqhy
 Requires: libqhy
 
 %description
