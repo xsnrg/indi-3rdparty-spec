@@ -42,7 +42,7 @@ BuildRequires: pkgconfig(libjpeg)
 BuildRequires: pkgconfig(libusb-1.0)
 BuildRequires: pkgconfig(zlib)
 
-Requires: libasi
+Requires: libqhy
 
 %description
 INDI is a distributed control protocol designed to operate
