@@ -42,6 +42,7 @@ BuildRequires: pkgconfig(libusb-1.0)
 BuildRequires: pkgconfig(zlib)
 
 BuildRequires: libapogee
+BuildRequires: libapogee-devel
 
 Requires: libapogee
 
@@ -74,7 +75,6 @@ make DESTDIR=%{buildroot} install
 %doc indi-apogee/AUTHORS indi-apogee/README
 %{_bindir}/*
 %{_datadir}/indi
-/lib/udev/rules.d/85-disable-dslr-automout.rules
 
 
 %changelog
