@@ -46,6 +46,8 @@ BuildRequires: pkgconfig(libjpeg)
 BuildRequires: pkgconfig(libusb-1.0)
 BuildRequires: pkgconfig(zlib)
 
+Requires: rpmlib
+Autoreq: 0
 
 %description
 INDI is a distributed control protocol designed to operate
@@ -77,6 +79,7 @@ make DESTDIR=%{buildroot} install
 %{_libdir}/*
 %{_includedir}/*
 
+%license libasi/license.txt
 
 %changelog
 * Sun Jul 19 2020 Jim Howard <jh.xsnrg+fedora@gmail.com> 1.8.6.git-1
