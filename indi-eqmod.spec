@@ -50,7 +50,7 @@ data acquisition, monitoring, and a lot more. This is a 3rd party driver.
 
 
 %prep -v
-%setup -n %{name}-%{version}
+%setup -n indi-3rdparty-master
 
 %build
 # This package tries to mix and match PIE and PIC which is wrong and will
@@ -58,7 +58,8 @@ data acquisition, monitoring, and a lot more. This is a 3rd party driver.
 # Disable LTO
 %define _lto_cflags %{nil}
 
-%cmake indi-eqmod/.
+cd indi-eqmod
+%cmake .
 make VERBOSE=1 %{?_smp_mflags}
 
 %install
