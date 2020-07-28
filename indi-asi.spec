@@ -59,9 +59,9 @@ data acquisition, monitoring, and a lot more. This is a 3rd party driver.
 # trigger link errors when LTO is enabled.
 # Disable LTO
 %define _lto_cflags %{nil}
-%define INDI_DATA_DIR /usr/share/indi
+
 cd indi-asi
-%cmake .
+%cmake -DINDI_DATA_DIR=/usr/share/indi .
 make VERBOSE=1 %{?_smp_mflags} -j4
 
 %install
