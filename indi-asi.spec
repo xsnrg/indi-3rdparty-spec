@@ -70,7 +70,7 @@ make DESTDIR=%{buildroot} install
 
 %files
 %{_bindir}/*
-/usr/share/indi/*
+/usr/share/indi/indi_asi.xml
 
 %changelog
 * Sun Jul 19 2020 Jim Howard <jh.xsnrg+fedora@gmail.com> 1.8.6.git-1
