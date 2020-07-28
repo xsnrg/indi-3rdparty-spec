@@ -13,6 +13,7 @@ Source0: https://github.com/indilib/indi-3rdparty/archive/master.tar.gz
 %define __find_requires %{nil}
 
 Provides: libqhyccd.so.20()(64bit)
+Provides: libqhyccd.so
 
 BuildRequires: cmake
 BuildRequires: libfli-devel
