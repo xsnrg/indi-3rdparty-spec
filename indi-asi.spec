@@ -59,7 +59,7 @@ data acquisition, monitoring, and a lot more. This is a 3rd party driver.
 # trigger link errors when LTO is enabled.
 # Disable LTO
 %define _lto_cflags %{nil}
-
+%define INDI_DATA_DIR /usr/share/indi
 cd indi-asi
 %cmake .
 make VERBOSE=1 %{?_smp_mflags} -j4
@@ -70,7 +70,7 @@ make DESTDIR=%{buildroot} install
 
 %files
 %{_bindir}/*
-/usr/share/indi/indi_asi.xml
+%{_datadir}/indi
 
 %changelog
 * Sun Jul 19 2020 Jim Howard <jh.xsnrg+fedora@gmail.com> 1.8.6.git-1
