@@ -44,6 +44,9 @@ BuildRequires: pkgconfig(libjpeg)
 BuildRequires: pkgconfig(libusb-1.0)
 BuildRequires: pkgconfig(zlib)
 
+Provides: libatikcameras.so()(64bit)
+Provides: libflycapture.so.2()(64bit)
+
 %description
 INDI is a distributed control protocol designed to operate
 astronomical instrumentation. INDI is small, flexible, easy to parse,
