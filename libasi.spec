@@ -72,6 +72,7 @@ cd libasi
 make DESTDIR=%{buildroot} install
 
 %files
+%{_lib}/*
 %{_libdir}/*
 %{_includedir}/*
 
