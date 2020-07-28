@@ -80,6 +80,7 @@ make DESTDIR=%{buildroot} install
 %files
 %{_bindir}/*
 %{_datadir}/indi
+%{_libdir}/*
 
 
 %changelog
