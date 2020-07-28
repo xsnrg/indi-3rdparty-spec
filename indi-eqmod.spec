@@ -60,10 +60,11 @@ data acquisition, monitoring, and a lot more. This is a 3rd party driver.
 
 cd indi-eqmod
 %cmake .
-make VERBOSE=1 %{?_smp_mflags}
+make VERBOSE=1 %{?_smp_mflags} -j4
 
 %install
-make install DESTDIR=%{buildroot}
+cd indi-eqmod
+make DESTDIR=%{buildroot} install
 
 %files
 %license indi-eqmod/COPYING LICENSE
