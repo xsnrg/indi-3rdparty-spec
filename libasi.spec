@@ -67,8 +67,8 @@ cd libasi
 make DESTDIR=%{buildroot} install
 
 %files
-%{_bindir}/*
-%{_datadir}/indi
+%{_libdir}/*
+%{_includedir}/*
 
 
 %changelog
