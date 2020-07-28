@@ -67,7 +67,7 @@ data acquisition, monitoring, and a lot more. This is a 3rd party driver.
 cd libasi
 %cmake .
 make %{?_smp_mflags} -j4
-make install
+make DESTDIR=%{buildroot} install
 
 cd ../indi-asi
 %cmake .
