@@ -30,6 +30,7 @@ BuildRequires: gpsd-devel
 BuildRequires: libdc1394-devel
 BuildRequires: boost-devel
 BuildRequires: boost-regex
+BuildRequires: libasi
 
 BuildRequires: gmock
 
@@ -59,12 +60,7 @@ data acquisition, monitoring, and a lot more. This is a 3rd party driver.
 # Disable LTO
 %define _lto_cflags %{nil}
 
-cd libasi
-%cmake .
-make %{?_smp_mflags} -j4
-make DESTDIR=%{buildroot} install
-
-cd ../indi-asi
+cd indi-asi
 %cmake .
 make VERBOSE=1 %{?_smp_mflags} -j4
 
