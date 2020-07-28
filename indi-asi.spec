@@ -43,11 +43,6 @@ BuildRequires: pkgconfig(zlib)
 
 Requires: libasi
 
-Provides: libASICamera2
-Provides: libEAFFocuser
-Provides: libEFWFilter
-Provides: libUSB2ST4Conv
-
 %description
 INDI is a distributed control protocol designed to operate
 astronomical instrumentation. INDI is small, flexible, easy to parse,
