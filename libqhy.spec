@@ -12,16 +12,7 @@ Source0: https://github.com/indilib/indi-3rdparty/archive/master.tar.gz
 %global debug_package %{nil}
 %define __find_requires %{nil}
 
-Provides: libASICamera2.so
-Provides: libEAFFocuser.so
-Provides: libEFWFilter.so
-Provides: libUSB2ST4Conv.so
-
-Provides: libASICamera2.so()(64bit)
-Provides: libEAFFocuser.so()(64bit)
-Provides: libEFWFilter.so()(64bit)
-Provides: libUSB2ST4Conv.so()(64bit)
-
+Provides: libqhyccd.so.20()(64bit)
 
 BuildRequires: cmake
 BuildRequires: libfli-devel
