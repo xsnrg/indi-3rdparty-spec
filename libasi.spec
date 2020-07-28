@@ -9,6 +9,11 @@ License: LGPLv2
 URL: https://indilib.org
 Source0: https://github.com/indilib/indi-3rdparty/archive/master.tar.gz
 
+Provides: libASICamera2.so
+Provides: libEAFFocuser.so
+Provides: libEFWFilter.so
+Provides: libUSB2ST4Conv.so
+
 BuildRequires: cmake
 BuildRequires: libfli-devel
 BuildRequires: libnova-devel
