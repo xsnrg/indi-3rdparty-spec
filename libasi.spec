@@ -46,8 +46,6 @@ BuildRequires: pkgconfig(libjpeg)
 BuildRequires: pkgconfig(libusb-1.0)
 BuildRequires: pkgconfig(zlib)
 
-Requires: rpmlib
-Autoreq: 0
 
 %description
 INDI is a distributed control protocol designed to operate
@@ -56,6 +54,7 @@ and scalable. It supports common DCS functions such as remote control,
 data acquisition, monitoring, and a lot more. This is a 3rd party driver.
 
 %global debug_package %{nil}
+%define __find_requires %{nil}
 
 %prep -v
 %setup -n indi-3rdparty-master
@@ -75,9 +74,9 @@ cd libasi
 make DESTDIR=%{buildroot} install
 
 %files
-/lib/udev/*
+/lib/udev/rules.d/99-asi.rules
 %{_libdir}/*
-%{_includedir}/*
+%{_includedir}/libasi
 
 %license libasi/license.txt
 
