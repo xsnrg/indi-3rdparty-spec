@@ -9,10 +9,19 @@ License: LGPLv2
 URL: https://indilib.org
 Source0: https://github.com/indilib/indi-3rdparty/archive/master.tar.gz
 
+%global debug_package %{nil}
+%define __find_requires %{nil}
+
 Provides: libASICamera2.so
 Provides: libEAFFocuser.so
 Provides: libEFWFilter.so
 Provides: libUSB2ST4Conv.so
+
+Provides: libASICamera2.so()(64bit)
+Provides: libEAFFocuser.so()(64bit)
+Provides: libEFWFilter.so()(64bit)
+Provides: libUSB2ST4Conv.so()(64bit)
+
 
 BuildRequires: cmake
 BuildRequires: libfli-devel
@@ -53,8 +62,6 @@ astronomical instrumentation. INDI is small, flexible, easy to parse,
 and scalable. It supports common DCS functions such as remote control,
 data acquisition, monitoring, and a lot more. This is a 3rd party driver.
 
-%global debug_package %{nil}
-%define __find_requires %{nil}
 
 %prep -v
 %setup -n indi-3rdparty-master
@@ -71,6 +78,7 @@ make VERBOSE=1 %{?_smp_mflags} -j4
 
 %install
 cd libasi
+find %buildroot -type f \( -name '*.so' -o -name '*.so.*' \) -exec chmod 755 {} +
 make DESTDIR=%{buildroot} install
 
 %files
