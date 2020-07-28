@@ -52,6 +52,7 @@ astronomical instrumentation. INDI is small, flexible, easy to parse,
 and scalable. It supports common DCS functions such as remote control,
 data acquisition, monitoring, and a lot more. This is a 3rd party driver.
 
+%global debug_package %{nil}
 
 %prep -v
 %setup -n indi-3rdparty-master
