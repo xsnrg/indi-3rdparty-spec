@@ -41,10 +41,6 @@ BuildRequires: pkgconfig(libjpeg)
 BuildRequires: pkgconfig(libusb-1.0)
 BuildRequires: pkgconfig(zlib)
 
-Provides: libASICamera2
-Provides: libEAFFocuser
-Provides: libEFWFilter
-Provides: libUSB2ST4Conv
 
 %description
 INDI is a distributed control protocol designed to operate
