@@ -67,8 +67,6 @@ cd indi-gpsd
 make DESTDIR=%{buildroot} install
 
 %files
-%license indi-gpsd/COPYING LICENSE
-%doc indi-gpsd/AUTHORS indi-gpsd/README
 %{_bindir}/*
 %{_datadir}/indi
 
