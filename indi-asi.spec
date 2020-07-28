@@ -41,6 +41,12 @@ BuildRequires: pkgconfig(libjpeg)
 BuildRequires: pkgconfig(libusb-1.0)
 BuildRequires: pkgconfig(zlib)
 
+Requires: libasi
+
+Provides: libASICamera2
+Provides: libEAFFocuser
+Provides: libEFWFilter
+Provides: libUSB2ST4Conv
 
 %description
 INDI is a distributed control protocol designed to operate
@@ -58,7 +64,12 @@ data acquisition, monitoring, and a lot more. This is a 3rd party driver.
 # Disable LTO
 %define _lto_cflags %{nil}
 
-cd indi-asi
+cd libasi
+%cmake .
+make %{?_smp_mflags} -j4
+make install
+
+cd ../indi-asi
 %cmake .
 make VERBOSE=1 %{?_smp_mflags} -j4
 
