@@ -69,7 +69,7 @@ make DESTDIR=%{buildroot} install
 %files
 %license LICENSE
 %{_bindir}/*
-%{_datadir}/indi
+%{_datadir}/indi/indi_celestronaux.xml
 
 
 %changelog
