@@ -69,7 +69,6 @@ make DESTDIR=%{buildroot} install
 %files
 %license LICENSE
 %{_bindir}/*
-/usr/share/indi/indi_celestronaux.xml
 
 
 %changelog
