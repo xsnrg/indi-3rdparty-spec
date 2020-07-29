@@ -59,7 +59,7 @@ data acquisition, monitoring, and a lot more. This is a 3rd party driver.
 %define _lto_cflags %{nil}
 
 cd indi-celestronaux
-%cmake .
+%cmake -DINDI_DATA_DIR=/usr/share/indi .
 make VERBOSE=1 %{?_smp_mflags} -j4
 
 %install
@@ -69,6 +69,7 @@ make DESTDIR=%{buildroot} install
 %files
 %license LICENSE
 %{_bindir}/*
+%{_datadir}/indi/indi_celestronaux.xml
 
 
 %changelog
