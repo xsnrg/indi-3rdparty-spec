@@ -43,6 +43,8 @@ BuildRequires: pkgconfig(libusb-1.0)
 BuildRequires: pkgconfig(zlib)
 
 BuildRequires: libsv305
+Requires: libsv305
+
 
 %description
 INDI is a distributed control protocol designed to operate
