@@ -1,6 +1,6 @@
 Name: indi-rtlsdr
 Version: 1.8.6.git
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Instrument Neutral Distributed Interface 3rd party drivers
 
 License: LGPLv2
@@ -42,6 +42,7 @@ BuildRequires: pkgconfig(libjpeg)
 BuildRequires: pkgconfig(libusb-1.0)
 BuildRequires: pkgconfig(zlib)
 
+BuildRequires: rtl-sdr-devel
 
 %description
 INDI is a distributed control protocol designed to operate
