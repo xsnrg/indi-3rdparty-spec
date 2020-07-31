@@ -45,6 +45,9 @@ BuildRequires: pkgconfig(libjpeg)
 BuildRequires: pkgconfig(libusb-1.0)
 BuildRequires: pkgconfig(zlib)
 
+Provides: libgxccd.so()(64bit)
+Provides: libgxccd.so
+
 
 %description
 INDI is a distributed control protocol designed to operate
