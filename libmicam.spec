@@ -12,6 +12,7 @@ Source0: https://github.com/indilib/indi-3rdparty/archive/master.tar.gz
 %global debug_package %{nil}
 %define __find_requires %{nil}
 
+
 BuildRequires: cmake
 BuildRequires: libfli-devel
 BuildRequires: libnova-devel
@@ -43,9 +44,6 @@ BuildRequires: pkgconfig(gsl)
 BuildRequires: pkgconfig(libjpeg)
 BuildRequires: pkgconfig(libusb-1.0)
 BuildRequires: pkgconfig(zlib)
-
-Provides: libmicam.so()(64bit)
-Provides: libmicam.so
 
 
 %description
@@ -80,6 +78,6 @@ make DESTDIR=%{buildroot} install
 
 
 %changelog
-* Wed Jul 29 2020 Jim Howard <jh.xsnrg+fedora@gmail.com> 1.8.6.git-1
+* Sun Jul 19 2020 Jim Howard <jh.xsnrg+fedora@gmail.com> 1.8.6.git-1
 - update to build from git for copr, credit to Sergio Pascual and Christian Dersch for prior work on spec files
 
