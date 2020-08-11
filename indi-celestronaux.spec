@@ -1,6 +1,6 @@
 Name: indi-celestronaux
 Version: 1.8.6.git
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Instrument Neutral Distributed Interface 3rd party drivers
 
 License: LGPLv2
