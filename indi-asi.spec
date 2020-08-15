@@ -1,6 +1,6 @@
 Name: indi-asi
 Version: 1.8.6.git
-Release: 3%{?dist}
+Release: 4%{?dist}
 Summary: Instrument Neutral Distributed Interface 3rd party drivers
 
 License: LGPLv2
