@@ -1,6 +1,6 @@
-Name: indi-ahp-interferometer
+Name: indi-ahp-correlator
 Version: 1.8.6.git
-Release: 2%{?dist}
+Release: 1%{?dist}
 Summary: Instrument Neutral Distributed Interface 3rd party drivers
 
 License: LGPLv2
@@ -58,12 +58,12 @@ data acquisition, monitoring, and a lot more. This is a 3rd party driver.
 # Disable LTO
 %define _lto_cflags %{nil}
 
-cd indi-ahp-interferometer
+cd indi-ahp-correlator
 %cmake -DINDI_DATA_DIR=/usr/share/indi .
 make VERBOSE=1 %{?_smp_mflags} -j4
 
 %install
-cd indi-ahp-interferometer
+cd indi-ahp-correlator
 make DESTDIR=%{buildroot} install
 
 %files
