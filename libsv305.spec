@@ -76,7 +76,7 @@ make DESTDIR=%{buildroot} install
 %files
 %{_libdir}/*
 %{_includedir}/libsv305
-/lib/udev/rules.d/90-ckusb.rules
+/lib/udev/rules.d/90-svbonyusb.rules
 
 
 %changelog
