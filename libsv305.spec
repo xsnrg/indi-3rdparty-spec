@@ -1,6 +1,6 @@
 Name: libsv305
 Version: 1.8.6.git
-Release: 4%{?dist}
+Release: 5%{?dist}
 Summary: Instrument Neutral Distributed Interface 3rd party drivers
 
 License: LGPLv2
