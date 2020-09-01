@@ -1,6 +1,6 @@
 Name: indi-gphoto
 Version: 1.8.6.git
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: Instrument Neutral Distributed Interface 3rd party drivers
 
 License: LGPLv2
