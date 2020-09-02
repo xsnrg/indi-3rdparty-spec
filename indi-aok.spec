@@ -1,6 +1,6 @@
 Name: indi-aok
 Version: 1.8.6.git
-Release: 1%{?dist}
+Release: %(date -u +%%Y%%m%%d%%H%%M%%S)%{?dist}
 Summary: Instrument Neutral Distributed Interface 3rd party drivers
 
 License: LGPLv2
