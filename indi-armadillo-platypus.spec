@@ -1,5 +1,5 @@
 Name: indi-armadillo-platypus
-Version: 1.8.6.git
+Version: 1.8.7.git
 Release: %(date -u +%%Y%%m%%d%%H%%M%%S)%{?dist}
 Summary: Instrument Neutral Distributed Interface 3rd party drivers
 
@@ -75,5 +75,5 @@ make DESTDIR=%{buildroot} install
 
 
 %changelog
-* Wed Jul 29 2020 Jim Howard <jh.xsnrg+fedora@gmail.com> 1.8.6.git-1
+* Wed Jul 29 2020 Jim Howard <jh.xsnrg+fedora@gmail.com> 1.8.7.git-1
 - update to build from git for copr, credit to Sergio Pascual and Christian Dersch for prior work on spec files
