@@ -50,7 +50,7 @@ data acquisition, monitoring, and a lot more. This is a 3rd party driver.
 
 
 %prep -v
-%setup -n %{Name}-%{Version}
+%setup -n %{name}-%{version}
 
 %build
 %define _lto_cflags %{nil}
